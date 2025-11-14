@@ -1,0 +1,138 @@
+/*style.css*/
+*{box-sizing: border-box; margin: 0; padding: 0; }
+html {font-size: 100%; -webkit-text-size-adjust: 100%;}
+:root{
+    --base-font: "Aptos", Arial, sans-serif;
+    --base-font-size: 16px;
+    --primary: white;
+    --accent: red;
+    --muted: black;
+    --container-width: 1100px;
+    --gap: 1rem;
+}
+body{
+    background-color: white;
+    margin: 0%;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    color: black;
+    /*topography*/
+}
+h1{
+    color: black;
+    font-size: 2rem;
+    margin-bottom: .5rem;
+
+}
+p{
+    color: var(--muted);
+    font-size: 1rem;
+    margin-bottom: .75rem;
+}
+/*Layout*/
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+.site-grid{
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: var(--gap);
+    align-items: start;
+}
+.header, .footer {
+    grid-column: 1 / -1;
+}
+.main {
+    grid-column: 1 / 2;
+}
+.sidebar {
+    grid-column: 2 / 3;
+}
+/*Visual styles*/
+.btn{
+    display: inline-block;
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    border: 1px solid transparent;
+    text-decoration: none;
+    font-weight: 600;
+}
+.btn-primary:hover,
+.btn-primary:focus {
+    background: color-mix(in srgb, var(--primary) 87%, black 13%);
+}
+nav a{
+    padding:  1rem;
+    display: inline-block;
+}
+.nav a:hover,
+.nav a:focus {
+    background: rgba(11, 110, 253, 0, 08);
+    border-radius: 15rem;
+}
+nav{
+    background-color: rgb(228, 26, 26);
+    color: white;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    padding: 0;
+}
+
+.nav-links li a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+.img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.contact-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.contact-item {
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    transition: transform .2s;
+}
+.contact-item:hover {
+    transform: translateY(-3px);
+}
+.contact-item i {
+    font-size: 2rem;
+    margin-bottom: .5rem;
+    color: #d50a30;            /* Audi red */
+}
+.more-menu { position: relative; display: inline-block; }
+.more-menu-content {
+    display: none;
+    position: absolute;
+    left: 50%; transform: translateX(-50%);
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,.15);
+    padding: .5rem 0;
+    border-radius: 4px;
+    white-space: nowrap;
+    z-index: 10;
+}
+.more-menu:hover .more-menu-content { display: block; }
+.more-menu-content a {
+    display: block;
+    padding: .5rem 1rem;
+    color: #333;
+    text-decoration: none;
+}
+.more-menu-content a:hover { background: #f5f5f5; }
